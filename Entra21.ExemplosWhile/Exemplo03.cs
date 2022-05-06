@@ -17,6 +17,7 @@ namespace Entra21.ExemplosWhile
                 Console.Write("Digite um nome: ");
                 nome = Console.ReadLine().ToLower().Trim();
                 indice = indice + 1;
+                Console.Write("oi: ");
             }
         }
     }
