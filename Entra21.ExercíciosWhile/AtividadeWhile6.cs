@@ -17,11 +17,15 @@ namespace Entra21.ExercíciosWhile
             int quantidade = 0;
             double valor = 0;
             int indice = 0;
+            double soma = 0;
+            double somaTodosProdutos = 0;
+            double desconto = 0;
+            double valorTotal = 0;
 
             while (nome != "sair")
             {
                 Console.Write("Digite o seu nome: ");
-                nome = Console.ReadLine();
+                nome = Console.ReadLine().ToLower().Trim();
 
                 while (nome != "sair")
                 {
@@ -30,14 +34,20 @@ namespace Entra21.ExercíciosWhile
                     Console.Write("Digite o valor: ");
                     valor = Convert.ToDouble(Console.ReadLine());
                     indice = indice + 1;
-                    Console.Write("Digite o seu nome: ");
-                    nome = Console.ReadLine();
 
+                    soma = quantidade * valor;
+                    somaTodosProdutos = somaTodosProdutos + soma;
+                    desconto = somaTodosProdutos * 0.05;
+                    valorTotal = somaTodosProdutos - desconto;
+
+                   
+                    Console.Write("Digite o seu nome: ");
+                    nome = Console.ReadLine().ToLower().Trim();
                     
                 }
 
             }
-
+            Console.WriteLine("O valor total do produto é: " + valorTotal);
         }
     }
 }
