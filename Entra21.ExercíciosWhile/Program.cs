@@ -10,7 +10,11 @@ Console.WriteLine(@"-----------MENU-----------
 4 - Atividade 04
 5 - Atividade 05
 6 - Atividade 06
-7 - Atividade 07");
+7 - Atividade 07
+8 - Atividade 08
+9 - Atividade 09
+10- Atividade 10
+11 - Atividade 11");
 
 Console.Write("Digite a opção desejada: ");
 int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
@@ -48,5 +52,25 @@ else if (opcaoDesejada == 6)
 else if (opcaoDesejada == 6)
 {
     AtividadeWhile7 nossaAtividade = new AtividadeWhile7();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 8)
+{
+    AtividadeWhile8 nossaAtividade = new AtividadeWhile8();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 9)
+{
+    AtividadeWhile9 nossaAtividade = new AtividadeWhile9();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 10)
+{
+    AtividadeWhile10 nossaAtividade = new AtividadeWhile10();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 11)
+{
+    AtividadeWhile11 nossaAtividade = new AtividadeWhile11();
     nossaAtividade.Executar();
 }
