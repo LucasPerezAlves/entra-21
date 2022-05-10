@@ -11,17 +11,18 @@ namespace Entra21.ExercíciosWhile
         public void Executar()
         {
 
-            int indice = 0;
+           
             int pedido = 0;
             int quantidadePedidos = 0;
             double valorTotal = 0;
-            
-            
- 
+            int bolo = 0;
+            int doce = 0;
+            int sanduiche = 0;
+            int pizza = 0;
 
             while (pedido != 16)
             {
-
+                quantidadePedidos = quantidadePedidos + 1;
 
                 Console.Write("Esse é o cardápio senhor: ");
 
@@ -54,10 +55,7 @@ Código  |  tipos    | Nome                        | valor
                 pedido = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
 
-                int bolo = 0;
-                int doce = 0;
-                int sanduiche = 0;
-                int pizza = 0;
+                
 
 
                 //quantidade pedidos
@@ -143,9 +141,21 @@ Código  |  tipos    | Nome                        | valor
                     valorTotal = valorTotal + 27.50;
                 }
             }
+
+            double media = valorTotal / quantidadePedidos;
+
+            Console.Write(@"Quantidade de bolos escolhidos é: " + bolo +
+               " \nA quantidade de doces escolhidos é: " + doce +
+               "\nA quantidade de sanduíches escolhidos é: " + sanduiche +
+               "\nA quantidade de pizzas escolhidas é: " + pizza +
+               "\nO valor total da comanda: R$" + valorTotal +
+               "\nO valor total da quantidade de pedidos é: " + quantidadePedidos +
+               "\nA média do valor dos produtos é: " + media);
+
+
+
+
             
-            
-           
 
         }
     }
