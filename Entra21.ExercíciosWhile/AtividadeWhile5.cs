@@ -40,7 +40,6 @@ Console.Write("Digite a quantidade de carros que deseja cadastrar: ");
                 somaValorCarro = somaValorCarro + valorCarro;
                 somaAnoCarro = somaAnoCarro + ano;
                 mediaAnoCarro = somaAnoCarro / quantidadeCarros;
-
                 mediaValorCarro = somaValorCarro / quantidadeCarros;
 
                 if (modeloCarro.StartsWith("g"))
