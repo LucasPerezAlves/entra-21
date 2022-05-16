@@ -18,4 +18,18 @@ if (opcaoDesejada == 1)
     AtividadeFor1 nossaAtividade = new AtividadeFor1();
     nossaAtividade.Executar();
 }
-
+if (opcaoDesejada == 8)
+{
+    AtividadeFor8while nossaAtividade = new AtividadeFor8while();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 5)
+{
+    AtividadeFor5while nossaAtividade = new AtividadeFor5while();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 12)
+{
+    AtividadeFor12while nossaAtividade = new AtividadeFor12while();
+    nossaAtividade.Executar();
+}

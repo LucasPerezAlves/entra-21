@@ -12,8 +12,24 @@ namespace Entra21.AtividadesFor
         {
             for (var i = 0; i < 13; i = i + 1)
             {
-                Console.WriteLine("Digite o nome da peça: ");
-                var nome = Console.ReadLine();
+
+                var valorValido = true;
+                while (valorValido == true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Digite o nome da peça: ");
+                        int nome = Convert.ToInt32(Console.ReadLine());
+                        valorValido = false;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Erro na digitação");
+
+
+                    }
+                }
             }
         }
     }
