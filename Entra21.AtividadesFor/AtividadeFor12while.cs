@@ -11,13 +11,15 @@ namespace Entra21.AtividadesFor
         public void Executar()
         {
 
-            var quantidadePedidos = 0;
+
             var quantidadeBolos = 0;
             var quantidadeDoces = 0;
             var quantidadeSanduiches = 0;
             var quantidadePizza = 0;
-            var somaProdutos = 0;
+            var media = 0.0;
             var valor = 0.0;
+            var codigoPedido = 0;
+            var quantidadePedidos = 0;
 
             Console.WriteLine(@" 
 Menu
@@ -41,93 +43,126 @@ Código  |  tipos    | Nome                        | valor
  15     | Pizzas    | Portuguesa                  | R$ 27,50
  16     | Sair      |                             |");
 
-            Console.WriteLine("Digite a quantidade de pedidos: ");
-            quantidadePedidos = Convert.ToInt32(Console.ReadLine());
-
+            try
+            {
+                Console.WriteLine("Digite a quantidade de pedidos: ");
+               quantidadePedidos = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Modelo digitado é inválido");
+            }
+           
 
             //quantidade de cada coisa
+
             for (var i = 0; i < quantidadePedidos; i = i + 1)
             {
-                if ((quantidadePedidos == 1) || (quantidadePedidos == 2) || (quantidadePedidos == 3) || (quantidadePedidos == 4) || (quantidadePedidos == 5))
+                try
+                {
+                    Console.WriteLine("Digite o numero do seu pedido: ");
+                    codigoPedido = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Modelo digitado é inválido");
+                }
+
+                if ((codigoPedido == 1) || (codigoPedido == 2) || (codigoPedido == 3) || (codigoPedido == 4) || (codigoPedido == 5))
                 {
                     quantidadeBolos = quantidadeBolos + 1;
                 }
-                else if ((quantidadePedidos == 6) || (quantidadePedidos == 7))
+                else if ((codigoPedido == 6) || (codigoPedido == 7))
                 {
                     quantidadeDoces = quantidadeDoces + 1;
                 }
-                else if ((quantidadePedidos == 8) || (quantidadePedidos == 9) || (quantidadePedidos == 10) || (quantidadePedidos == 11))
+                else if ((codigoPedido == 8) || (codigoPedido == 9) || (codigoPedido == 10) || (codigoPedido == 11))
                 {
                     quantidadeSanduiches = quantidadeSanduiches + 1;
                 }
-                else if ((quantidadePedidos == 12) || (quantidadePedidos == 13) || (quantidadePedidos == 14) || (quantidadePedidos == 15))
+                else if ((codigoPedido == 12) || (codigoPedido == 13) || (codigoPedido == 14) || (codigoPedido == 15))
                 {
                     quantidadePizza = quantidadePizza + 1;
-
-                    //valor total
-
-                    if (quantidadePedidos == 1)
-                    {
-                        valor = valor + 29.50;
-                    }
-                    else if (quantidadePedidos == 2)
-                    {
-                        valor = valor + 2.00;
-                    }
-                    else if (quantidadePedidos == 3)
-                    {
-                        valor = valor + 29.13;
-                    }
-                    else if (quantidadePedidos == 4)
-                    {
-                        valor = valor + 7.10;
-                    }
-                    else if (quantidadePedidos == 5)
-                    {
-                        valor = valor + 19.33;
-                    }
-                    else if (quantidadePedidos == 6)
-                    {
-                        valor = valor + 17.71;
-                    }
-                    else if (quantidadePedidos == 7)
-                    {
-                        valor = valor + 4.82;
-                    }
-                    else if (quantidadePedidos == 8)
-                    {
-                        valor = valor + 21.16;
-                    }
-                    else if (quantidadePedidos == 9)
-                    {
-                        valor = valor + 12.70;
-                    }
-                    else if (quantidadePedidos == 10)
-                    {
-                        valor = valor + 19.70;
-                    }
-                    else if (quantidadePedidos == 11)
-                    {
-                        valor = valor + 28.22;
-                    }
-                    else if (quantidadePedidos == 12)
-                    {
-                        valor = valor + 8.98;
-                    }
-                    else if (quantidadePedidos == 13)
-                    {
-                        valor = valor + 0.42;
-                    }
-                    else if (quantidadePedidos == 14)
-                    {
-                        valor = valor + 18.36;
-                    }
-                    else if (quantidadePedidos == 15)
-                    {
-                        valor = valor + 27.50;
-                    }
                 }
+                //valor total
+
+                if (codigoPedido == 1)
+                {
+                    valor = valor + 29.50;
+                }
+                else if (codigoPedido == 2)
+                {
+                    valor = valor + 2.00;
+                }
+                else if (codigoPedido == 3)
+                {
+                    valor = valor + 29.13;
+                }
+                else if (codigoPedido == 4)
+                {
+                    valor = valor + 7.10;
+                }
+                else if (codigoPedido == 5)
+                {
+                    valor = valor + 19.33;
+                }
+                else if (codigoPedido == 6)
+                {
+                    valor = valor + 17.71;
+                }
+                else if (codigoPedido == 7)
+                {
+                    valor = valor + 4.82;
+                }
+                else if (codigoPedido == 8)
+                {
+                    valor = valor + 21.16;
+                }
+                else if (codigoPedido == 9)
+                {
+                    valor = valor + 12.70;
+                }
+                else if (codigoPedido == 10)
+                {
+                    valor = valor + 19.70;
+                }
+                else if (codigoPedido == 11)
+                {
+                    valor = valor + 28.22;
+                }
+                else if (codigoPedido == 12)
+                {
+                    valor = valor + 8.98;
+                }
+                else if (codigoPedido == 13)
+                {
+                    valor = valor + 0.42;
+                }
+                else if (codigoPedido == 14)
+                {
+                    valor = valor + 18.36;
+                }
+                else if (codigoPedido == 15)
+                {
+                    valor = valor + 27.50;
+                }
+
+
+
+
+                //Média dos produtos
+
+
+                media = valor / quantidadePedidos;
+
             }
+            Console.WriteLine(@"Quantidade de bolos escolhidos é: " + quantidadeBolos +
+           " \nA quantidade de doces escolhidos é: " + quantidadeDoces +
+           "\nA quantidade de sanduíches escolhidos é: " + quantidadeSanduiches +
+           "\nA quantidade de pizzas escolhidas é: " + quantidadePizza +
+           "\nO valor total da comanda: R$" + valor +
+           "\nO valor total da quantidade de pedidos é: " + codigoPedido +
+           "\nA média do valor dos produtos é: " + media);
         }
     }
 }

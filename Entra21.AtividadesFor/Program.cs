@@ -5,9 +5,10 @@ using Entra21.AtividadesFor;
 
 Console.Write(@"--------------MENU---------------
 1 - Atividade 01
-2 - Atividade 02
-3 - Atividade 03
-4 - Atividade 04");
+8 - Atividade 05
+8 - Atividade 08
+12 - Atividade 12
+");
 
 Console.Write("Digite a opção desejada: ");
 var opcaoDesejada = Convert.ToInt32(Console.ReadLine());
