@@ -28,93 +28,190 @@ namespace Entra21.AtividadesFor {
             var menosVermelhos = int.MaxValue;
             var maisAmarelos = int.MinValue;
             var menosAmarelos = int.MaxValue;
-            var nome
+            var nomeMaisVermelhos = "";
+            var nomeMenosVermelhos = "";
+            var nomeMaisAmarelos = "";
+            var nomeMenosAmarelos = "";
 
-            for (var i = 0; i < 22; i = i + 1) {
+            for (var i = 0; i < 2; i = i + 1) {
 
-                quantidadeLetrasNome = nome.Length;
-                Console.WriteLine("Digite o seu nome: ");
-                nome = Console.ReadLine();
+                var nomeValido = false;
+                while (nomeValido == false) {
+                    try {
+                        Console.WriteLine("Digite o seu nome: ");
+                        nome = Console.ReadLine();
+                        quantidadeLetrasNome = nome.Length;
+                        nomeValido = true;
+                    }
+
+                    catch (Exception ex) {
+                        Console.WriteLine("Nome inválido!!");
+                    }
+
+                }
 
 
-                if (quantidadeLetrasNome < maiorNome) {
+                if (quantidadeLetrasNome > maiorNome) {
 
                     maiorNome = quantidadeLetrasNome;
                 }
-                
+
                 if (quantidadeLetrasNome < menorNome) {
                     menorNome = quantidadeLetrasNome;
                 }
-
-                Console.WriteLine("Digite a sua idade: ");
-                idade = Convert.ToInt32(Console.ReadLine());
-
-
-
-                Console.WriteLine("Digite o seu peso: ");
-                peso = Convert.ToDouble(Console.ReadLine());
-
-                if (peso < menorPeso) {
-                    menorPeso = peso;
+                var idadeValida = false;
+                while (idadeValida == false) {
+                    try {
+                        Console.WriteLine("Digite a sua idade: ");
+                        idade = Convert.ToInt32(Console.ReadLine());
+                        idadeValida = true;
+                    }
+                    catch (Exception ex) {
+                        Console.WriteLine("Idade inválida!!");
+                    }
                 }
 
-                if (peso < maiorPeso) {
-                    maiorPeso = peso;
+                var pesoValido = false;
+                while (pesoValido == false) {
+                    try {
+                        Console.WriteLine("Digite o seu peso: ");
+                        peso = Convert.ToDouble(Console.ReadLine());
+                        pesoValido = true;
+
+                        if (peso < menorPeso) {
+                            menorPeso = peso;
+                        }
+
+                        if (peso > maiorPeso) {
+                            maiorPeso = peso;
+                        }
+                    }
+
+                    catch (Exception ex) {
+                        Console.WriteLine("Peso digitado é inválido!!");
+                    }
                 }
 
-                Console.WriteLine("Digite F/M: ");
-                sexo = Console.ReadLine().Trim();
+                var sexoValido = false;
+                while (sexoValido == false) {
+                    try {
+                        Console.WriteLine("Digite F/M: ");
+                        sexo = Console.ReadLine().ToLower().Trim();
+                        sexoValido = true;
 
-                if (sexo == "F") {
-                    quantidadeJogadoresF = quantidadeJogadoresF + 1;
+                        if (sexo == "f") {
+                            quantidadeJogadoresF = quantidadeJogadoresF + 1;
+                        }
+                        else if (sexo == "m") {
+                            quantidadeJogadoresM = quantidadeJogadoresM + 1;
+                        }
+                    }
+
+                    catch (FormatException ex) {
+                        Console.WriteLine("Sexo inválido!!");
+                    }
                 }
-                else if (sexo == "M") {
-                    quantidadeJogadoresM = quantidadeJogadoresM + 1;
-                }
+                    var alturaValida = false;
+                while (alturaValida == false) {
+                    try {
+                        Console.WriteLine("Digite a sua altura");
+                        altura = Convert.ToDouble(Console.ReadLine());
+                        alturaValida = true;
 
-
-
-                Console.Write("Digite a sua altura");
-                altura = Convert.ToDouble(Console.ReadLine());
-
-                if (maiorAltura < altura) {
-                    maiorAltura = altura;
-                }
-
-
-                Console.WriteLine("Digite a quantidade de gols marcados: ");
-                quantidadeGols = Convert.ToInt32(Console.ReadLine());
-
-
-                Console.WriteLine("Digite a quantidade de amarelos recebidos: ");
-                quantidadeAmarelos = Convert.ToInt32(Console.ReadLine());
-                
-                if (menosAmarelos < quantidadeAmarelos) {
-                    menosAmarelos = quantidadeAmarelos;
-                }
-
-                if (maisAmarelos < quantidadeAmarelos) {
-                    maisAmarelos = quantidadeAmarelos;
-                }
-
-                Console.WriteLine("Digite a quantidade de vermelhos recebidos: ");
-                quantidadeVermelhos = Convert.ToInt32(Console.ReadLine());
-
-                if (maisVermelhos < quantidadeVermelhos) {
-                    maisVermelhos = quantidadeVermelhos;
-                }
-                
-                if (menosVermelhos < quantidadeVermelhos) {
-                    menosVermelhos = quantidadeVermelhos;
-
+                        if (altura > maiorAltura) {
+                            maiorAltura = altura;
+                        }
+                    }
+                    catch (Exception ex) {
+                        Console.WriteLine("Altura digitada é inváida!!");
+                    }
                 }
 
-                Console.Clear();
+
+                var golsValidos = false;
+                while (golsValidos == false) {
+                    try {
+
+                        Console.WriteLine("Digite a quantidade de gols marcados: ");
+                        quantidadeGols = Convert.ToInt32(Console.ReadLine());
+                        golsValidos = true;
+                    }
+                    catch (Exception ex) {
+                        Console.WriteLine("Gols digitado é inválido!!");
+                    }
+                }
+                var amareloValido = false;
+                while (amareloValido == false) {
+                    try {
+
+                        Console.WriteLine("Digite a quantidade de amarelos recebidos: ");
+                        quantidadeAmarelos = Convert.ToInt32(Console.ReadLine());
+                       
+
+                        if (quantidadeAmarelos < menosAmarelos) {
+                            menosAmarelos = quantidadeAmarelos;
+                        }
+
+                        if (quantidadeAmarelos > maisAmarelos) {
+                            maisAmarelos = quantidadeAmarelos;
+                        }
+
+                        nomeMaisAmarelos = nome;
+                        nomeMenosAmarelos = nome;
+                        amareloValido = true;
+                    }
+                   
+
+
+                    catch (Exception ex) {
+                        Console.WriteLine("Quantidade amarelos digitado é inválido!!");
+                    }
+                }
+
+                var vermelhoValido = false;
+                while (vermelhoValido == false) {
+                    try {
+                        Console.WriteLine("Digite a quantidade de vermelhos recebidos: ");
+                        quantidadeVermelhos = Convert.ToInt32(Console.ReadLine());
+                       
+
+                        if (quantidadeVermelhos > maisVermelhos) {
+                            maisVermelhos = quantidadeVermelhos;
+                        nomeMaisVermelhos = nome;
+                        }
+
+                        if (quantidadeVermelhos < menosVermelhos) {
+                            menosVermelhos = quantidadeVermelhos;
+
+                        nomeMenosVermelhos = nome;
+                        }
+                        vermelhoValido = true;
+                    }
+
+
+                    catch (Exception ex) {
+                        Console.WriteLine("Quantidade de vermelhos digitado é inválido!!");
+                    }
+                }
+
+
+                        Console.Clear();
 
 
 
 
-            }
+                    }
+                        Console.WriteLine("O jogador com menor peso é: "+ menorPeso +
+                            "\nO jogador com maior peso é: " + maiorPeso +
+                            "\nO jogador com maior altura é: " + maiorAltura +
+                            "\nO jogador com maior nome é: " + maiorNome +
+                            "\nO jogador com menor nome é: " + menorNome +
+                            "\nA quantidade de jogadoras do sexo feminino é: " + quantidadeJogadoresF +
+                            "\nA quantidade de jogadores do sexo masculino é: " + quantidadeJogadoresM +
+                            "\nO jogador com maior quantidade de vermelhos recebido é: " + nomeMaisVermelhos + "/" + maisVermelhos +
+                            "\nO jogador com menor quantidade de vermehos recebido é: " + nomeMenosVermelhos + "/" + menosVermelhos +
+                            "\nO jogador com maior quantidade de amarelos recebido é: " + nomeMaisAmarelos + "/" + maisAmarelos +
+                            "\nO jogador com menor quantidade de amrelos recebido é: " + nomeMenosAmarelos + "/" + menosAmarelos);
         }
     }
 }

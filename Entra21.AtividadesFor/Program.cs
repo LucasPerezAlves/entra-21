@@ -8,6 +8,7 @@ Console.Write(@"--------------MENU---------------
 8 - Atividade 05
 8 - Atividade 08
 12 - Atividade 12
+13 - Atividade 13
 ");
 
 Console.Write("Digite a opção desejada: ");
@@ -32,5 +33,9 @@ else if (opcaoDesejada == 5)
 else if (opcaoDesejada == 12)
 {
     AtividadeFor12while nossaAtividade = new AtividadeFor12while();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 13) {
+    AtividadeFor13while nossaAtividade = new AtividadeFor13while();
     nossaAtividade.Executar();
 }
