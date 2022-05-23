@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.AtividadesVetor
 {
-    internal class AtividadeVetor6
+    internal class AtividadesVetor6
     {
         public void Executar()
         {

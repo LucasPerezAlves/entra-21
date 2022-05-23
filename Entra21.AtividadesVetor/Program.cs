@@ -41,11 +41,16 @@ else if (opcaoDesejada == 5)
 }
 else if (opcaoDesejada == 6)
 {
-    AtividadeVetor6 nossaAtividade = new AtividadeVetor6();
+    AtividadesVetor6 nossaAtividade = new AtividadesVetor6();
     nossaAtividade.Executar();
 }
 else if (opcaoDesejada == 7)
 {
     AtividadesVetor7 nossaAtividade = new AtividadesVetor7();
+    nossaAtividade.Executar();
+}
+else if (opcaoDesejada == 8)
+{
+    AtividadesVetor8 nossaAtividade = new AtividadesVetor8();
     nossaAtividade.Executar();
 }
