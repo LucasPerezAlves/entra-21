@@ -54,3 +54,8 @@ else if (opcaoDesejada == 8)
     AtividadesVetor8 nossaAtividade = new AtividadesVetor8();
     nossaAtividade.Executar();
 }
+else if (opcaoDesejada == 9)
+{
+    AtividadesVetor9 nossaAtividade = new AtividadesVetor9();
+    nossaAtividade.Executar();
+}
