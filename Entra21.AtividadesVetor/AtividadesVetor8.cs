@@ -12,7 +12,7 @@ namespace Entra21.AtividadesVetor
         {
 
             var numeroPar = 0;
-           
+            var numeroDigitado = 0;
 
             int[] numeros = new int[10];
 
@@ -21,24 +21,24 @@ namespace Entra21.AtividadesVetor
                 var numeroValido = false;
                 while (numeroValido == false)
                 {
+
                     try
                     {
                         Console.WriteLine("Digite o " + (i + 1) + "º numero:");
-                        numeros[i] = Convert.ToInt32(Console.ReadLine());
-                        
-                        numeroValido = true;
+                        numeroDigitado= Convert.ToInt32(Console.ReadLine());
+
                     }
                     catch
                     {
                         Console.WriteLine("Numero inválido");
                     }
 
-                    if (numeroPar % 2 == 0)
+                    if (numeroDigitado % 2 == 0)
                     {
-                        numeroPar = numeros[i];
-                        numeroValido = false;
+                        numeros[i] = numeroDigitado;
+                        numeroValido = true;
                     }
-                   
+
                 }
             }
             Console.Clear();

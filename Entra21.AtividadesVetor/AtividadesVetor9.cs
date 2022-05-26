@@ -13,7 +13,7 @@ namespace Entra21.AtividadesVetor
             string[] nomes = new string[4];
             string[] vetores = new string [4];
 
-            for (var i = 2; i < nomes.Length; i = i - 1)
+            for (var i = 0; i < nomes.Length; i = i + 1)
             {
                 Console.WriteLine("Digite o " + (i + 1) + "º nome");
                 nomes[i] = Console.ReadLine();
