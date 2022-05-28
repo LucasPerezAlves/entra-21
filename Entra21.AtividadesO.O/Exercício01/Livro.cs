@@ -24,19 +24,37 @@ namespace Entra21.AtividadesOrientacaoObjetos
             
         }
         
-        public int quantidadePaginasParaLer()
-        { 
+        public int QuantidadePaginasParaLer()
+        {
 
-            Console.WriteLine($"A quantidade de páginas que você precisa ler é: {QuantidadePaginas - QuantidadePaginasLidas}");
-            QuantidadePaginasLidas = Convert.ToInt32(Console.ReadLine());
+            var quantidadePaginasLidas = QuantidadePaginasLidas;
+            var quantidadePaginasTotalLivro =  QuantidadePaginas;
 
-            return QuantidadePaginasLidas;
+            return (quantidadePaginasTotalLivro - quantidadePaginasLidas);
+
+            Console.WriteLine($"A quantidade de páginas que precisa ler é: {QuantidadePaginasParaLer()}");
         }
 
-        public void QuantidadePaginasLidaTotal()
+        public int QuantidadePaginasLidaTotal()
         {
-            QuantidadeReleituras = QuantidadePaginasLidas + QuantidadePaginasLidas;
-           
+            var releitura = QuantidadeReleituras;
+            var quantidadeLidasTotal = releitura * QuantidadePaginas + QuantidadePaginasLidas;
+
+            if (QuantidadeReleituras > 0)
+            {
+                return quantidadeLidasTotal;
+            }
+
+            return QuantidadePaginasLidas;
+
+            Console.WriteLine("A quantidade de pa");
+        }
+
+        public DateTime QuantidadeAnosAposPublicacao()
+        {
+
+            var anoLancamento = DataLancamento.Year;
+
         }
     }
 }
