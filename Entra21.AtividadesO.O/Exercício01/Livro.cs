@@ -50,11 +50,7 @@ namespace Entra21.AtividadesOrientacaoObjetos
             Console.WriteLine("A quantidade de pa");
         }
 
-        public DateTime QuantidadeAnosAposPublicacao()
-        {
+        
 
-            var anoLancamento = DataLancamento.Year;
-
-        }
     }
 }

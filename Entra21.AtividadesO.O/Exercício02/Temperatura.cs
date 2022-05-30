@@ -8,72 +8,89 @@ namespace Entra21.AtividadesOrientacaoObjetos.Exercício02
 {
     public class Temperatura
     {
-        public string TemperaturaOrigem;
-        public string TemperaturaDestino;
+        public double TemperaturaOrigem;
+        public double TemperaturaDestino;
         public double ValorTemperatura;
-        public double CalcularCelsius()
+        public double TemperaturaConvertida;
+
+
+        public double CalcularCelsiusParaKelvin()
         {
 
-
-            var temperaturaFahrenheit = ValorTemperatura;
-
-                var temperaturaKelvin = ValorTemperatura;
-
-            if (TemperaturaOrigem.StartsWith("k"))
-
-            { 
-                temperaturaKelvin = (ValorTemperatura - 273.15);
-                return temperaturaKelvin;
-            }
-
-            else if (TemperaturaOrigem.StartsWith("f"))
-            {
-
-                temperaturaFahrenheit = ((ValorTemperatura- 32) / 1.8);
-                return temperaturaFahrenheit;
-            }
-
-            return ValorTemperatura;
+            var celsiusParaKelvin = (ValorTemperatura + 273.15);
+            return celsiusParaKelvin;
 
         }
 
-        public double CalularParaKelvin()
+        public double CalcularCelsiusParaFahrenheit()
         {
-
-            var temperaturaCelsius = ValorTemperatura;
-            var temperaturaFahrenheit = ValorTemperatura;
-
-            if (TemperaturaOrigem.StartsWith("c"))
-            {
-                temperaturaCelsius = (ValorTemperatura + 273.15);
-                return temperaturaCelsius; 
-            }
-            else if (TemperaturaOrigem.StartsWith("f"))
-            {
-                temperaturaFahrenheit = ((ValorTemperatura + 32) *1.8 + 273.15);
-                return temperaturaFahrenheit;
-            }
-            return ValorTemperatura;
+            var celsiusParaFahrenheit = ((ValorTemperatura * 1.8) + 32);
+            return celsiusParaFahrenheit;
         }
 
-        public double CalcularFahrenheit()
+        public double CalcularKelvinParaCelsius()
         {
-            var temperaturaCelsius = ValorTemperatura;
-            var temperaturaKelvin = ValorTemperatura;
-
-            if (TemperaturaOrigem.StartsWith("k"))
-            {
-                temperaturaKelvin = ((ValorTemperatura - 32) * 1.8 - 273.15);
-                return temperaturaKelvin;
-            }
-            else if (TemperaturaOrigem.StartsWith("c"))
-            {
-                temperaturaCelsius = ((ValorTemperatura + 32) / 1.8);
-                return temperaturaCelsius;
-            }
-            return ValorTemperatura;
+            var kelvinParaCelsius = (ValorTemperatura - 273.15);
+            return kelvinParaCelsius;
         }
 
+        public double CalcularKelvinParaFahrenheit()
+        {
+            var kelvinParaFahrenheit = ((ValorTemperatura * 1.8) - 459.67);
+            return kelvinParaFahrenheit;
+        }
 
+        public double CalcularFahrenheitParaCelsius()
+        {
+            var fahrenheitParaCelsius = ((ValorTemperatura - 32) / 1.8);
+            return fahrenheitParaCelsius;
+        }
+
+        public double CalcularFahrenheitParaKelvin()
+        {
+            var fahrenheitParaKelvin = ((ValorTemperatura + 459.67) / 1.8);
+            return fahrenheitParaKelvin;
+        }
+
+        public void ApresentarTemperaturaConvertida()
+        {
+            
+            if (TemperaturaOrigem == 1 && TemperaturaDestino == 2)
+            {
+                Console.WriteLine("Temperatura origem digitada: Celsius" +
+                                    "\nTemperatura destino digitada: Fahrenheit" +
+                                    "\nTemperatura convertida: " + CalcularCelsiusParaFahrenheit());
+            }
+            else if (TemperaturaOrigem == 1 && TemperaturaDestino == 3)
+            {
+                Console.WriteLine("Temperatura origem digitada: Celsius" +
+                                "\nTemperatura destino digitada: Kelvin" +
+                                "\nTemperatura convertida: " + CalcularCelsiusParaKelvin());
+            }
+            else if (TemperaturaOrigem == 2 && TemperaturaDestino == 1)
+            {
+                Console.WriteLine("Temperatura origem digitada: Fahrenheit" +
+                                "\nTemperatura destino digitada: Celsius" +
+                                "\nTemperatura convertida: " + CalcularFahrenheitParaCelsius());
+            }
+            else if (TemperaturaOrigem == 2 && TemperaturaDestino == 3)
+            {
+                Console.WriteLine("Temperatura origem digitada: Fahrenheit" +
+                                "\nTemperatura destino digitada: Kelvin" +
+                                "\nTemperatura convertida: " + CalcularFahrenheitParaKelvin());
+            }
+            else if (TemperaturaOrigem == 3 && TemperaturaDestino == 1)
+            {
+                Console.WriteLine("Temperatura origem digitada: Kelvin" +
+                                "\nTemperatura destino digitada: Celsius" +
+                                "\nTemperatura convertida: " + CalcularKelvinParaCelsius());
+            }
+            else if (TemperaturaOrigem == 3 && TemperaturaDestino == 2)
+            {
+                Console.WriteLine("Temperatura origem digitada: Kelvin" +
+                                "\nTemperatura destino digitada: Fahrenheit" +
+                                "\nTemperatura convertida: " + CalcularKelvinParaFahrenheit());
+            }
+        }
     }
 }
