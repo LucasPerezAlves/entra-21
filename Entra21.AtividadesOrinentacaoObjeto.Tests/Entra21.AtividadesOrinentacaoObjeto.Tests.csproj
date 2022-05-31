@@ -18,4 +18,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Entra21.AtividadesO.O\Entra21.AtividadesOrientacaoObjetos.csproj" />
+  </ItemGroup>
+
 </Project>

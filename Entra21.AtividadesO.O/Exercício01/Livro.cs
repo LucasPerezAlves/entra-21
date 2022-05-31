@@ -47,7 +47,14 @@ namespace Entra21.AtividadesOrientacaoObjetos
 
             return QuantidadePaginasLidas;
 
-            Console.WriteLine("A quantidade de pa");
+            Console.WriteLine($"A quantidade de páginas lidas no total é: {QuantidadePaginasLidaTotal}");
+        }
+
+        public double ApresentarQuantidadeAnosAposPublicacao()
+        {
+            var anosAposPublicacao = DateTime.Now.Year - DataLancamento.Year;
+            Console.WriteLine($"Quantidade de anos após publicação: {anosAposPublicacao}");
+            return anosAposPublicacao;
         }
 
         

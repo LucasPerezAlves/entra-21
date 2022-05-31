@@ -23,6 +23,8 @@ namespace Entra21.AtividadesOrientacaoObjetos.Exercício01
             Console.WriteLine("A quantidade de páginas que falta ler para acabar o livro é: " + livro.QuantidadePaginasParaLer() +
                 "\n A quantidade de páginas lidas no total é: " + livro.QuantidadePaginasLidaTotal());
 
+            livro.ApresentarQuantidadeAnosAposPublicacao();
+
         }
     }
 }
