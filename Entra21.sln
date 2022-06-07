@@ -31,7 +31,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercíciosOrientaçãoObje
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.AtividadesOrientacaoObjetos", "Entra21.AtividadesO.O\Entra21.AtividadesOrientacaoObjetos.csproj", "{E4BA0918-676C-4FE6-8DC9-ADEFFBCBFF07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.AtividadesOrinentacaoObjeto.Tests", "Entra21.AtividadesOrinentacaoObjeto.Tests\Entra21.AtividadesOrinentacaoObjeto.Tests.csproj", "{486567AD-7A19-4B16-BC3C-9530A8ABBDD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.AtividadesOrinentacaoObjeto.Tests", "Entra21.AtividadesOrinentacaoObjeto.Tests\Entra21.AtividadesOrinentacaoObjeto.Tests.csproj", "{486567AD-7A19-4B16-BC3C-9530A8ABBDD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AtividadesListas", "AtividadesListas", "{37EBCAE4-D238-4E6F-925E-2710B2EB6B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.AtividadesListas", "Entra21.AtividadesListas\Entra21.AtividadesListas.csproj", "{5F991B84-A9F2-418A-9560-68A067C585BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{486567AD-7A19-4B16-BC3C-9530A8ABBDD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{486567AD-7A19-4B16-BC3C-9530A8ABBDD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{486567AD-7A19-4B16-BC3C-9530A8ABBDD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F991B84-A9F2-418A-9560-68A067C585BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F991B84-A9F2-418A-9560-68A067C585BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F991B84-A9F2-418A-9560-68A067C585BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F991B84-A9F2-418A-9560-68A067C585BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,7 @@ Global
 		{AA2AC353-2CB3-4304-9630-11F2B9A01721} = {F5DDEFC6-06F7-422D-86B1-4BE129999284}
 		{E4BA0918-676C-4FE6-8DC9-ADEFFBCBFF07} = {1ABADEA3-F9C1-4391-888F-770507754B63}
 		{486567AD-7A19-4B16-BC3C-9530A8ABBDD6} = {1ABADEA3-F9C1-4391-888F-770507754B63}
+		{5F991B84-A9F2-418A-9560-68A067C585BE} = {37EBCAE4-D238-4E6F-925E-2710B2EB6B00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F78D6E8-3250-45AD-A318-CE96A51A8247}
