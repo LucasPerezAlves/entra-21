@@ -13,7 +13,7 @@ namespace Entra21.AtividadesListas
             List<double> numeros = new List<double>();
 
             Console.WriteLine("Digite a primeira nota: ");
-            numeros.Add = Convert.ToDouble(Console.ReadLine());
+            numeros.Add (Convert.ToDouble(Console.ReadLine()));
         }
     }
 }
