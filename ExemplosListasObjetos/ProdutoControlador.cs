@@ -50,7 +50,6 @@ namespace Entra21.ExemplosListasObjetos
                 Console.ReadKey();
             }
         }
-
         private void ApresentarProduto()
         {
             ApresentarProduto();
@@ -87,7 +86,6 @@ namespace Entra21.ExemplosListasObjetos
                     ? "Registro removido com sucesso"
                     : "Nenhum produto cadastrado com codigo informado");
             }
-
         private void Editar()
         {
             ApresentarProdutos();

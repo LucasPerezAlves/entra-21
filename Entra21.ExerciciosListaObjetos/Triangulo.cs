@@ -8,28 +8,26 @@ namespace Entra21.ExerciciosListaObjetos
 {
     public class Triangulo
     {
-        public int lado1;
-        public int lado2;
-        public int lado3;
+        public int Lado1;
+        public int Lado2;
+        public int Lado3;
+        public int Codigo;
 
         public bool ValidarTriangulo()
         {
-            if ((lado1 + lado2) > lado3)
+            if ((Lado1 + Lado2) > Lado3)
             {
                 return true;
             }
-            else if ((lado2 + lado3) > lado1)
+            else if ((Lado2 + Lado3) > Lado1)
             {
                 return true;
             }
-            else if ((lado3 + lado1) > lado2)
+            else if ((Lado3 + Lado1) > Lado2)
             {
                 return true;
             }
-
-
-
-
+            return false;
 
         }
     }
