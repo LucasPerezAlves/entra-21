@@ -21,7 +21,7 @@ namespace Entra21.ExerciciosListaObjetos
                 Console.Clear();
             }
         }
-        public void Editar()
+        private void Editar()
         {
             ApresentarTriangulos();
             Console.Write("Código do triangulo desejado: ");
@@ -36,8 +36,31 @@ namespace Entra21.ExerciciosListaObjetos
             Console.Write("Lado 3: ");
             var lado3 = Convert.ToInt32(Console.ReadLine());
 
-            var alterou
+            var alterou = trianguloServico.Editar(codigo, lado1, lado2, lado3);
+
+            if(alterou == false)
+            {
+                Console.Write("código digitado não existe");
+            }
+            else
+            {
+                Console.WriteLine("Produto alterado com sucesso");
+            }
         }
+        private void Apagar()
+        {
+            ApresentarTriangulo();
+
+            Console.Write("Digite o código do triângulo para ser apagado");
+            int codigo = Convert.ToInt32(Console.ReadLine());
+
+            var registroApagado = trianguloServico.Apagar(codigo);
+
+            Console.Write(registroApagado == true
+                ? "Registro removido com sucesso"
+                : "Nenhum triangulo cadastrado com o código informado");
+        }
+        pri
         private void ApresentarTriangulo()
         {
             ApresentarTriangulo();
@@ -57,7 +80,21 @@ namespace Entra21.ExerciciosListaObjetos
                 "\nLado2: " + triangulo.Lado2 +
                 "\nLado3: " + triangulo.Lado3);
         }
-        public void ApresentarTriangulos()
+        private void CadastrarTriangulo()
+        {
+            Console.Write("Informe o valor do primeiro lado do triângulo: ");
+            int lado1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Informe o valor do segundo lado do triângulo: ");
+            var lado2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Informe o valor do terceiro lado do triângulo: ");
+            var lado3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
+            Console.Write("lado 1 cadastrado com valor de: " + lado1 +
+                "\nLado 2 cadastrado com valor de: " + lado2 +
+                "\nLado 3 cadastrado com valor de: " + lado3);
+        }
+        private void ApresentarTriangulos()
         {
             var triangulos = trianguloServico.ObterTodos();
             if (triangulos.Count == 0)
