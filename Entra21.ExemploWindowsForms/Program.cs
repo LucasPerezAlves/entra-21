@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Entra21.ExemploWindowsForms.Exemplo01;
+using System;
 using System.Windows.Forms;
 
 namespace Entra21.ExemploWindowsForms
@@ -16,7 +14,7 @@ namespace Entra21.ExemploWindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new PacientesForms());
         }
     }
 }
