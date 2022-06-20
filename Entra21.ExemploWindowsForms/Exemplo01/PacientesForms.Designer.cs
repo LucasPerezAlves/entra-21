@@ -39,13 +39,18 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.Apagar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnImc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(515, 47);
+            this.labelNome.Location = new System.Drawing.Point(555, 47);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(35, 13);
             this.labelNome.TabIndex = 0;
@@ -53,7 +58,7 @@
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(518, 63);
+            this.textBoxNome.Location = new System.Drawing.Point(558, 63);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(219, 20);
             this.textBoxNome.TabIndex = 1;
@@ -61,7 +66,7 @@
             // labelAltura
             // 
             this.labelAltura.AutoSize = true;
-            this.labelAltura.Location = new System.Drawing.Point(516, 86);
+            this.labelAltura.Location = new System.Drawing.Point(555, 86);
             this.labelAltura.Name = "labelAltura";
             this.labelAltura.Size = new System.Drawing.Size(34, 13);
             this.labelAltura.TabIndex = 2;
@@ -69,7 +74,7 @@
             // 
             // textBoxAltura
             // 
-            this.textBoxAltura.Location = new System.Drawing.Point(518, 102);
+            this.textBoxAltura.Location = new System.Drawing.Point(558, 102);
             this.textBoxAltura.Name = "textBoxAltura";
             this.textBoxAltura.Size = new System.Drawing.Size(219, 20);
             this.textBoxAltura.TabIndex = 3;
@@ -77,7 +82,7 @@
             // labelPeso
             // 
             this.labelPeso.AutoSize = true;
-            this.labelPeso.Location = new System.Drawing.Point(519, 125);
+            this.labelPeso.Location = new System.Drawing.Point(555, 125);
             this.labelPeso.Name = "labelPeso";
             this.labelPeso.Size = new System.Drawing.Size(31, 13);
             this.labelPeso.TabIndex = 4;
@@ -85,7 +90,7 @@
             // 
             // textBoxPeso
             // 
-            this.textBoxPeso.Location = new System.Drawing.Point(518, 141);
+            this.textBoxPeso.Location = new System.Drawing.Point(558, 141);
             this.textBoxPeso.Name = "textBoxPeso";
             this.textBoxPeso.Size = new System.Drawing.Size(219, 20);
             this.textBoxPeso.TabIndex = 5;
@@ -93,7 +98,7 @@
             // labelImc
             // 
             this.labelImc.AutoSize = true;
-            this.labelImc.Location = new System.Drawing.Point(519, 180);
+            this.labelImc.Location = new System.Drawing.Point(555, 175);
             this.labelImc.Name = "labelImc";
             this.labelImc.Size = new System.Drawing.Size(26, 13);
             this.labelImc.TabIndex = 6;
@@ -101,7 +106,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(615, 175);
+            this.buttonSalvar.Location = new System.Drawing.Point(655, 170);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(122, 23);
             this.buttonSalvar.TabIndex = 7;
@@ -132,10 +137,41 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCodigo,
+            this.ColumnNome,
+            this.ColumnAltura,
+            this.ColumnPeso,
+            this.ColumnImc});
+            this.dataGridView1.Location = new System.Drawing.Point(2, 63);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 365);
             this.dataGridView1.TabIndex = 10;
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            // 
+            // ColumnAltura
+            // 
+            this.ColumnAltura.HeaderText = "Altura";
+            this.ColumnAltura.Name = "ColumnAltura";
+            // 
+            // ColumnPeso
+            // 
+            this.ColumnPeso.HeaderText = "Peso";
+            this.ColumnPeso.Name = "ColumnPeso";
+            // 
+            // ColumnImc
+            // 
+            this.ColumnImc.HeaderText = "IMC";
+            this.ColumnImc.Name = "ColumnImc";
             // 
             // PacientesForms
             // 
@@ -174,5 +210,10 @@
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button Apagar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAltura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnImc;
     }
 }

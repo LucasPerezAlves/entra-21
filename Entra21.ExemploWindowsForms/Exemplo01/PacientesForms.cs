@@ -67,7 +67,7 @@ namespace Entra21.ExemploWindowsForms.Exemplo01
         {
             indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
 
-            if(indiceLinhaSelecionada == -1)
+            if (indiceLinhaSelecionada == -1)
             {
                 MessageBox.Show("Selecione um paciente");
                 return;

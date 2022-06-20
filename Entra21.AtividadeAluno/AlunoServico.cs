@@ -23,7 +23,7 @@ namespace Entra21.AtividadeAluno
             aluno.CodigoMatricula = codigoMatricula;
 
             codigoMatricula = codigoMatricula + 1;
-            alunos.Add(aluno);  
+            alunos.Add(aluno);
         }
 
         public bool Remover(string nome)
@@ -45,7 +45,7 @@ namespace Entra21.AtividadeAluno
         {
             Aluno alunoParaAlterar = ObterPorCodigo(codigoMatricula);
 
-            if (alunoParaAlterar == null) 
+            if (alunoParaAlterar == null)
             {
                 return false;
             }
@@ -61,7 +61,7 @@ namespace Entra21.AtividadeAluno
         {
             Aluno notaParaAlterar = ObterPorCodigo(codigoMatricula);
 
-            if(notaParaAlterar == null)
+            if (notaParaAlterar == null)
             {
                 return false;
             }
@@ -87,7 +87,7 @@ namespace Entra21.AtividadeAluno
         public List<Double> ObterMedias()
         {
             var medias = new List<Double>();
-            for (int i = 0;i < alunos.Count; i++)
+            for (int i = 0; i < alunos.Count; i++)
             {
                 var media = alunos[i].CalcularMedia();
                 medias.Add(media);
@@ -105,7 +105,7 @@ namespace Entra21.AtividadeAluno
             return aprovados;
         }
 
-        public List <string> ObterReprovados()
+        public List<string> ObterReprovados()
         {
             var reprovados = new List<string>();
             for (var i = 0; i <= alunos.Count; i++)
@@ -114,7 +114,7 @@ namespace Entra21.AtividadeAluno
             }
             return reprovados;
         }
-    
+
 
         public List<string> Obter_EmExame()
         {
@@ -128,27 +128,43 @@ namespace Entra21.AtividadeAluno
 
         public double ObterMediaPorCodigoMatricula(int codigoMatricula)
         {
-            for(var i = 0;i <= alunos.Count; i++)
+            var alunoPorCodigo = ObterPorCodigo(codigoMatricula);
+
+            var mediaAluno = alunoPorCodigo.CalcularMedia();
+
+            return mediaAluno;
+        }
+
+        public AlunoStatus ObterStatusPorCodigoMatricula(int codigoMatricula)
+        {
+            var alunoPorCodigo = ObterPorCodigo(codigoMatricula);
+
+            var statusAluno = alunoPorCodigo.ObterStatus();
+
+            return statusAluno;
+        }
+
+        public List<Aluno> ObterTodos()
+        {
+            return alunos;
+        }
+
+        public double ObterMediaIdades()
+        {
+            var alunos = ObterTodos();
+            var somaIdade = 0.0;
+
+            for (var i = 0; i < alunos.Count; i++)
             {
-                var aluno = alunos[i];
+                var idadeAluno = Convert.ToDouble(alunos[i].Idade);
 
-                if(aluno.CodigoMatricula == codigoMatricula)
-                {
-                    return aluno.CalcularMedia();
-                }
-
+                somaIdade = idadeAluno + somaIdade;
+                    
             }
-            return 
-        }
 
-        public AlunoStatus ObterStatusPorCodigoMatricula(int codigo)
-        {
+            double mediaIdade = somaIdade / alunos.Count;
 
-        }
-
-        public double ObterMedialdes()
-        {
-
+            return mediaIdade;
         }
 
         public Aluno ObterPorCodigo(int codigo)
@@ -157,9 +173,25 @@ namespace Entra21.AtividadeAluno
             {
                 var codigoAtual = alunos[i];
 
-                if(codigoAtual.CodigoMatricula == codigo)
+                if (codigoAtual.CodigoMatricula == codigo)
                 {
                     return codigoAtual;
+                }
+            }
+            return null;
+        }
+
+        private Aluno ObterAlunoPorNome(string nome)
+        {
+            var nomeAluno = nome;
+
+            for (var i = 0; i < alunos.Count; i++)
+            {
+                var alunoAtual = alunos[i];
+                
+                if(alunoAtual.Nome == aluno)
+                {
+                    return alunoAtual;
                 }
             }
             return null;
