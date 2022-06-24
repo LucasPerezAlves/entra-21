@@ -8,6 +8,8 @@ namespace Entra21.ExemploWindowsForms.Exemplo01
 {
     public partial class PacientesForms : Form
     {
+       
+
         private List<Paciente> pacientes;
 
         private int codigo = 0;

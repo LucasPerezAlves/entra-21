@@ -15,6 +15,8 @@ namespace Entra21.ExemploWindowsForms.Exemplo01
         {
             //Construtor: mais pra frente
             enderecos = new List<Endereco>();
+
+            LerArquivo();
         }
 
         //Metodo adicionar recebe como parametro o objeto do endereço completo de Form (Controller)
