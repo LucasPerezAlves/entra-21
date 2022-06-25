@@ -19,8 +19,8 @@ namespace Entra21.ExemploWindowsForms.Exemplo01
 
         private void buttonPacientes_Click(object sender, EventArgs e)
         {
-            var enderecosForm = new EnderecosForm();
-            enderecosForm.ShowDialog();
+            var pacientesForm = new PacientesForms();
+            pacientesForm.ShowDialog();
         }
 
         private void buttonEnderecos_Click(object sender, EventArgs e)

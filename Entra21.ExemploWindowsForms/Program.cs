@@ -14,7 +14,7 @@ namespace Entra21.ExemploWindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PacientesForms());
+            Application.Run(new MenuPrincipalForm());
         }
     }
 }

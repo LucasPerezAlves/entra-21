@@ -16,7 +16,7 @@ namespace Entra21.ExerciciosListaObjetos
             while (codigo != 6)
             {
                 Console.Clear();
-                codigo = ApresentarTriangulos();
+                //codigo = apresentartriangulos();
 
                 Console.Clear();
             }
@@ -38,7 +38,7 @@ namespace Entra21.ExerciciosListaObjetos
 
             var alterou = trianguloServico.Editar(codigo, lado1, lado2, lado3);
 
-            if(alterou == false)
+            if (alterou == false)
             {
                 Console.Write("código digitado não existe");
             }
@@ -60,7 +60,7 @@ namespace Entra21.ExerciciosListaObjetos
                 ? "Registro removido com sucesso"
                 : "Nenhum triangulo cadastrado com o código informado");
         }
-        pri
+
         private void ApresentarTriangulo()
         {
             ApresentarTriangulo();
