@@ -39,7 +39,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.AtividadesListas", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExemplosListasObjetos", "ExemplosListasObjetos", "{799FB68E-FC9B-46CD-A47D-AD272CB82D5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosListasObjetos", "ExemplosListasObjetos\Entra21.ExemplosListasObjetos.csproj", "{EAD84AAF-FC07-4862-82A7-00357F3C8591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosListasObjetos", "ExemplosListasObjetos\Entra21.ExemplosListasObjetos.csproj", "{EAD84AAF-FC07-4862-82A7-00357F3C8591}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercíciosSQL", "ExercíciosSQL", "{8EE0EB35-F17F-4798-A8AB-18EEA55DA989}"
+	ProjectSection(SolutionItems) = preProject
+		ExerciciosSQL\Entra21.ExerciciosSQL01.sql = ExerciciosSQL\Entra21.ExerciciosSQL01.sql
+		Entra21.ExerciciosSQL02.sql = Entra21.ExerciciosSQL02.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
