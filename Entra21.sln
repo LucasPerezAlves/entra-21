@@ -44,7 +44,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercíciosSQL", "ExercíciosSQL", "{8EE0EB35-F17F-4798-A8AB-18EEA55DA989}"
 	ProjectSection(SolutionItems) = preProject
 		ExerciciosSQL\Entra21.ExerciciosSQL01.sql = ExerciciosSQL\Entra21.ExerciciosSQL01.sql
-		Entra21.ExerciciosSQL02.sql = Entra21.ExerciciosSQL02.sql
+		ExerciciosSQL\Entra21.ExerciciosSQL02.sql = ExerciciosSQL\Entra21.ExerciciosSQL02.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercíciosListaObjetos", "ExercíciosListaObjetos", "{6F9F8410-CC71-42FB-87D4-5148213122EA}"
@@ -60,6 +60,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemploWindowsForms", "Entra21.ExemploWindowsForms\Entra21.ExemploWindowsForms.csproj", "{DD057253-0EF1-4F17-AC3C-38B4E03B4547}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExemploWindowsForms", "ExemploWindowsForms", "{BB4B5369-B8D7-4D89-B0F4-FB8F16852351}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExemplosSQL", "ExemplosSQL", "{47F348BE-D8DE-4B14-834B-346E0EDC0E07}"
+	ProjectSection(SolutionItems) = preProject
+		ExemplosSQL\Entra21.ExemplosSQLAluno.sql = ExemplosSQL\Entra21.ExemplosSQLAluno.sql
+		ExemplosSQL\Entra21.ExemplosSQLProdutos.sql = ExemplosSQL\Entra21.ExemplosSQLProdutos.sql
+		ExemplosSQL\Entra21.ExemplosSQLTrabalhos.sql = ExemplosSQL\Entra21.ExemplosSQLTrabalhos.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
