@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercíciosWhile", "Entra21.ExercíciosWhile\Entra21.ExercíciosWhile.csproj", "{E1BD36BF-673D-4FC1-88A5-9A0AC7F4A496}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.AtividadeLista1", "ListaExercícios1\Entra21.AtividadeLista1.csproj", "{DEA5159E-C465-411D-A00D-7ED25855E6F0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.AtividadesFor", "Entra21.AtividadesFor\Entra21.AtividadesFor.csproj", "{475B5EC2-DA2E-40C3-A3D8-A38089596705}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.AtividadesVetor", "Entra21.AtividadesVetor\Entra21.AtividadesVetor.csproj", "{86A19E2A-E0B8-4247-B1A2-7E75EBCA5258}"
@@ -16,8 +14,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientaçãoObjetos", "Entra21.ExemplosOrientaçãoObjetos\Entra21.ExemplosOrientaçãoObjetos.csproj", "{AB45DEFE-F626-45A2-90DB-649D1D0575CE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosOrientaçãoObjetos.Testes", "Entra21.ExemplosOrientaçãoObjetos.Testes\Entra21.ExemplosOrientaçãoObjetos.Testes.csproj", "{AA2AC353-2CB3-4304-9630-11F2B9A01721}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lista1", "Lista1", "{B644A143-9E62-4A8F-9366-19E4ED02219B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AtividadesVetor", "AtividadesVetor", "{8AA66DF3-511D-469F-ABDD-9E35AD781D5E}"
 EndProject
@@ -43,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosListasObjet
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercíciosSQL", "ExercíciosSQL", "{8EE0EB35-F17F-4798-A8AB-18EEA55DA989}"
 	ProjectSection(SolutionItems) = preProject
+		ExerciciosSQL\alunos_estrutura_insert.sql = ExerciciosSQL\alunos_estrutura_insert.sql
+		ExerciciosSQL\cidades_estrutura_insert.sql = ExerciciosSQL\cidades_estrutura_insert.sql
 		ExerciciosSQL\Entra21.ExerciciosSQL01.sql = ExerciciosSQL\Entra21.ExerciciosSQL01.sql
 		ExerciciosSQL\Entra21.ExerciciosSQL02.sql = ExerciciosSQL\Entra21.ExerciciosSQL02.sql
 	EndProjectSection
@@ -82,10 +80,6 @@ Global
 		{E1BD36BF-673D-4FC1-88A5-9A0AC7F4A496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1BD36BF-673D-4FC1-88A5-9A0AC7F4A496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1BD36BF-673D-4FC1-88A5-9A0AC7F4A496}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEA5159E-C465-411D-A00D-7ED25855E6F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEA5159E-C465-411D-A00D-7ED25855E6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEA5159E-C465-411D-A00D-7ED25855E6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEA5159E-C465-411D-A00D-7ED25855E6F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{475B5EC2-DA2E-40C3-A3D8-A38089596705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{475B5EC2-DA2E-40C3-A3D8-A38089596705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{475B5EC2-DA2E-40C3-A3D8-A38089596705}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -137,7 +131,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7EC526E3-F979-4CD1-A713-E341B1820C47} = {7779D402-2A9E-42D4-9AB5-9D60F950FAE4}
 		{E1BD36BF-673D-4FC1-88A5-9A0AC7F4A496} = {7779D402-2A9E-42D4-9AB5-9D60F950FAE4}
-		{DEA5159E-C465-411D-A00D-7ED25855E6F0} = {B644A143-9E62-4A8F-9366-19E4ED02219B}
 		{475B5EC2-DA2E-40C3-A3D8-A38089596705} = {1F9EAE2D-43DD-425A-90A8-FF0CA368537C}
 		{86A19E2A-E0B8-4247-B1A2-7E75EBCA5258} = {8AA66DF3-511D-469F-ABDD-9E35AD781D5E}
 		{AB45DEFE-F626-45A2-90DB-649D1D0575CE} = {F5DDEFC6-06F7-422D-86B1-4BE129999284}
