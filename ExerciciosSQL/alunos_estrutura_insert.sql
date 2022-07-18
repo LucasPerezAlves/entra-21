@@ -2842,3 +2842,4 @@ WHERE nome LIKE '%Justino%' AND signo LIKE 'A%';
 --26. Apresentar a média das médias.
 SELECT AVG(media)
 FROM alunos;
+--a
