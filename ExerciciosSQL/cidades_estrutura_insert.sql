@@ -5535,3 +5535,60 @@ WHERE estado LIKE 'SP'
 --caracteres.
 SELECT cidade
 FROM cidades
+-------------------------------------LISTA DE UPDATE-------------------------------------------------------------
+
+--estado for ‘sc’ estado SS
+UPDATE cidades
+SET estado = 'SS'
+WHERE estado = 'SC'
+
+--cidade for ‘Blumenau’ cidade Brumenau estado SC
+UPDATE cidades
+SET cidade = 'Brumenau',
+estado = 'SC'
+WHERE cidade = 'Blumenau';
+
+--cidade que começar com ‘Bata’ cidade Batata
+UPDATE cidades
+SET cidade = 'Batata'
+WHERE cidade LIKE 'Bata%'
+
+--cidade que conter ‘Belo’ cidade trocar belo por Lindo
+UPDATE cidades
+SET cidade = REPLACE(cidade, 'Belo', 'Lindo')
+WHERE cidade LIKE '%Belo%'
+
+--cidade que começar com ‘Indaia’ estado SC
+UPDATE cidades
+SET estado = 'SC'
+WHERE cidade LIKE 'Indaia%'
+
+--cidade que conter ‘Timbó’ estado SC
+UPDATE cidades
+SET estado = 'SC'
+WHERE cidade LIKE '%Timbó%'
+
+--cidade que conter ‘José’ cidade trocar ‘José’ por josué
+UPDATE cidades
+SET cidade = REPLACE(cidade, 'José', 'Josué')
+WHERE cidade LIKE '%José%'
+
+--estado que contém SP estado PS
+UPDATE cidades
+SET estado = 'PS'
+Where estado LIKE '%SP%'
+
+--cidade que o nome contém 10 caracteres cidade qualquer texto
+UPDATE cidades
+SET cidade = 'Qualquer texto'
+WHERE LEN(cidade) > 10;
+
+--cidade que começar com ‘It’ cidade It
+UPDATE cidades
+SET cidade = 'It'
+WHERE cidade LIKE 'It%'
+
+--cidade que termina com ‘ã’ estado TO
+UPDATE cidades
+SET estado = 'TO'
+WHERE cidade LIKE '%ã'
