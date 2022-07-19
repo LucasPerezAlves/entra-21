@@ -46,7 +46,7 @@ namespace Entra21.BancoDados01.Ado.Net.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
             comando.CommandText =
-                "UPDATE personagens SET id_tipo_personagenm = @ID_TIPO_PERSONAGEM, id_editora = @ID_EDITORA, nome = @NOME WHERE id = @ID";
+                "UPDATE personagens SET id_tipo_personagem = @ID_TIPO_PERSONAGEM, id_editora = @ID_EDITORA, nome = @NOME WHERE id = @ID";
 
             //Substituir os @ do update com o valores preenchidos pelo usuário
             comando.Parameters.AddWithValue("@ID_TIPO_PERSONAGEM",
@@ -66,7 +66,7 @@ namespace Entra21.BancoDados01.Ado.Net.Service
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "SELECT id, id_tipo_personagens, id_editora, nome FROM personagens WHERE id + @ID";
+            comando.CommandText = "SELECT id, id_tipo_personagem, id_editora, nome FROM personagens WHERE id = @ID";
 
             //Substituir o @ do comando do select com o id
             comando.Parameters.AddWithValue("@ID", id);

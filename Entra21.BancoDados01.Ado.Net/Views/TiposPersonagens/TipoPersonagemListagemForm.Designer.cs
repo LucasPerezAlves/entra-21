@@ -39,9 +39,10 @@
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(679, 12);
+            this.buttonCadastrar.Location = new System.Drawing.Point(776, 16);
+            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrar.Size = new System.Drawing.Size(86, 31);
             this.buttonCadastrar.TabIndex = 0;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(574, 12);
+            this.buttonEditar.Location = new System.Drawing.Point(656, 16);
+            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.Size = new System.Drawing.Size(86, 31);
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(465, 12);
+            this.buttonApagar.Location = new System.Drawing.Point(531, 16);
+            this.buttonApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
+            this.buttonApagar.Size = new System.Drawing.Size(86, 31);
             this.buttonApagar.TabIndex = 2;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
@@ -75,35 +78,42 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
             this.ColumnTipo});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 55);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 529);
             this.dataGridView1.TabIndex = 3;
             // 
             // ColumnId
             // 
             this.ColumnId.HeaderText = "ID";
+            this.ColumnId.MinimumWidth = 6;
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 125;
             // 
             // ColumnTipo
             // 
             this.ColumnTipo.HeaderText = "Tipo";
+            this.ColumnTipo.MinimumWidth = 6;
             this.ColumnTipo.Name = "ColumnTipo";
             this.ColumnTipo.ReadOnly = true;
+            this.ColumnTipo.Width = 125;
             // 
             // TipoPersonagemListagemForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonCadastrar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TipoPersonagemListagemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos de Personagens";
