@@ -5592,3 +5592,30 @@ WHERE cidade LIKE 'It%'
 UPDATE cidades
 SET estado = 'TO'
 WHERE cidade LIKE '%ã'
+
+--------------------------------------LISTA DE DELETE---------------------------------------
+
+--1. Apagar a(s) cidade(s) do estado do Rio Grande do Sul.
+DELETE cidades
+WHERE estado LIKE 'RS';
+
+--2. Apagar a(s) cidade(s) do estado do Acre que a cidade comece com a letra ‘R’.
+DELETE cidades
+WHERE estado LIKE 'AC' AND
+cidade LIKE 'R%'
+
+--3. Apagar a(s) cidade(s) que o nome termine com ‘goas’.
+DELETE cidades
+WHERE cidade LIKE '%goas'
+
+--4. Apagar a(s) cidade(s) que o nome contenha irmãos em qualquer parte .
+DELETE cidades
+WHERE cidade LIKE '%irmãos%'
+
+--5. Apagar a(s) cidade(s) do estado de Minas Gerais.
+DELETE cidades
+WHERE estado LIKE 'MG'
+
+--6. Apagar a(s) cidade(s) que o nome seja ‘Douradina’.
+DELETE cidades
+WHERE cidade LIKE 'Douradina'
