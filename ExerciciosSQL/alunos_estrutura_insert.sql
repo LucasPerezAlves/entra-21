@@ -2844,3 +2844,73 @@ SELECT AVG(media)
 FROM alunos;
 ----------------------------LISTA DE UPDATE-------------------------------------------------------------------------------------------------------
 
+--ano for 1996 nota 1 9.9
+UPDATE alunos
+SET nota_1 = 9.9
+WHERE YEAR(data_nascimento) = 1996;
+
+--nome começar com ‘Urbano’ nota 2 1.3
+UPDATE alunos
+SET nota_2 = 1.3
+WHERE nome LIKE 'Urbano%'
+
+--número favorito for ímpar número random
+--UPDATE alunos
+--SET numero_favorito
+
+--signo for peixes signo Áries número favorito 100 cor preferida preto nome Marcela
+UPDATE alunos
+SET signo = 'Áries',
+numero_favorito = 100,
+cor_preferida = 'Preto',
+nome = 'Marcela'
+WHERE signo = 'peixes'
+
+--cor preferida for cáqui cor preferida azul nota 2 9.3
+UPDATE alunos
+SET cor_preferida = 'azul',
+nota_2 = 9.3
+WHERE cor_preferida = 'Cáqui'
+
+--cpf for ‘10194731189’ cpf 101.947.311-89
+UPDATE alunos
+SET cpf = '10194731189'
+WHERE cpf = '101.947.311-89';
+
+--nome terminar com ‘Goes’
+
+--média for menor que 4 nota 1 1...nota 2 1...nota 3 1...nota 4 1
+UPDATE alunos
+SET nota_1 = 1,
+nota_2 = 1,
+nota_3 = 1,
+nota_4 = 1
+WHERE media < 4;
+
+--nick for Fueusn nick Ninjutsu
+UPDATE alunos
+SET nick = 'Ninjutsu'
+WHERE nick = 'Fueusn'
+
+--nick for Saxiol nick Dobermann cor preferida rosa
+UPDATE alunos
+SET nick = 'Dobermann',
+cor_preferida = 'rosa'
+WHERE nick = 'Saxiol';
+
+--data de nascimento o dia for trinta e um data nascimento trocar o dia para 30
+UPDATE alunos
+SET data_nascimento = CONVERT(DATETIME, FORMAT(data_nascimento, 'yyyy-MM-30 H:mm:ss'))
+WHERE DAY(data_nascimento) = 31;
+
+--cor preferida for roxo ou coral cor preferida roxo.. nick Roxolandia
+UPDATE alunos
+SET cor_preferida = 'roxo',
+nick = 'Roxolandia'
+WHERE cor_preferida LIKE 'roxo' OR
+cor_preferida LIKE 'coral'
+
+--data de nascimento o mês for julho data nascimento trocar o mês para junho.. data nascimento trocar o ano para 2018
+UPDATE alunos
+SET data_nascimento = CONVERT(DATETIME, FORMAT(data_nascimento, '2018-06-dd H:mm:ss'))
+WHERE MONTH(data_nascimento) = 07;
