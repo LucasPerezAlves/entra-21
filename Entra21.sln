@@ -70,7 +70,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.BancoDados01.Ado.Ne
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercicioSqlCsharp", "ExercicioSqlCsharp", "{BE59109C-3ECC-4F34-85CD-2821A14785F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExercicioCidades.Ado.Net", "Entra21.ExercicioCidades.Ado.Net\Entra21.ExercicioCidades.Ado.Net.csproj", "{845AE3E9-7AEF-4411-8D70-7D5FA031AAE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExercicioCidades.Ado.Net", "Entra21.ExercicioCidades.Ado.Net\Entra21.ExercicioCidades.Ado.Net.csproj", "{845AE3E9-7AEF-4411-8D70-7D5FA031AAE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
