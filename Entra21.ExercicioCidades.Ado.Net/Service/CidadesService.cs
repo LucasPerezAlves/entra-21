@@ -75,12 +75,14 @@ namespace Entra21.ExercicioCidades.Ado.Net.Service
             var registro = dataTable.Rows[0];
             var cidades = new Cidades();
             cidades.Id = Convert.ToInt32(registro["id"]);
-            cidades.Quantidade_Habitantes = registro["quantidade_habitantes"]
 
             cidades.UnidadeFederativa = new UnidadesFederativas();
             cidades.UnidadeFederativa.Id = Convert.ToInt32(registro["id_unidade_federativa"]);
             cidades.Nome = registro["nome"].ToString();
-           
+
+            conexao.Close();
+
+            return cidades;
             
         }
 
