@@ -14,6 +14,6 @@ namespace Entra21.ExercicioCidades.Ado.Net.Models
         public DateTime Data_Hora_Fundacao { get; set; }
         public decimal Pib { get; set; }
         //Será preenchido com innerJoin
-        public Cidades UnidadeFederativa { get; set; }
+        public UnidadesFederativas UnidadeFederativa { get; set; }
     }
 }
