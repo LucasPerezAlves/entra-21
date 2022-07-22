@@ -34,8 +34,12 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelDataHoraFundacao = new System.Windows.Forms.Label();
             this.labelPib = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxPib = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxQuantidadeHabitantes = new System.Windows.Forms.MaskedTextBox();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.Cancelar = new System.Windows.Forms.Button();
+            this.labelUnidadeFederativa = new System.Windows.Forms.Label();
+            this.comboBoxUnidadeFederativa = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelNome
@@ -88,12 +92,12 @@
             this.labelPib.TabIndex = 6;
             this.labelPib.Text = "Pib";
             // 
-            // maskedTextBox1
+            // maskedTextBoxPib
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(12, 191);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 23);
-            this.maskedTextBox1.TabIndex = 7;
+            this.maskedTextBoxPib.Location = new System.Drawing.Point(12, 191);
+            this.maskedTextBoxPib.Name = "maskedTextBoxPib";
+            this.maskedTextBoxPib.Size = new System.Drawing.Size(200, 23);
+            this.maskedTextBoxPib.TabIndex = 7;
             // 
             // maskedTextBoxQuantidadeHabitantes
             // 
@@ -102,13 +106,53 @@
             this.maskedTextBoxQuantidadeHabitantes.Size = new System.Drawing.Size(200, 23);
             this.maskedTextBoxQuantidadeHabitantes.TabIndex = 8;
             // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Location = new System.Drawing.Point(173, 280);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvar.TabIndex = 9;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.Location = new System.Drawing.Point(73, 280);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.Cancelar.TabIndex = 10;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // labelUnidadeFederativa
+            // 
+            this.labelUnidadeFederativa.AutoSize = true;
+            this.labelUnidadeFederativa.Location = new System.Drawing.Point(12, 224);
+            this.labelUnidadeFederativa.Name = "labelUnidadeFederativa";
+            this.labelUnidadeFederativa.Size = new System.Drawing.Size(105, 15);
+            this.labelUnidadeFederativa.TabIndex = 11;
+            this.labelUnidadeFederativa.Text = "UnidadeFederativa";
+            // 
+            // comboBoxUnidadeFederativa
+            // 
+            this.comboBoxUnidadeFederativa.FormattingEnabled = true;
+            this.comboBoxUnidadeFederativa.Location = new System.Drawing.Point(12, 242);
+            this.comboBoxUnidadeFederativa.Name = "comboBoxUnidadeFederativa";
+            this.comboBoxUnidadeFederativa.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxUnidadeFederativa.TabIndex = 12;
+            // 
             // CidadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 478);
+            this.Controls.Add(this.comboBoxUnidadeFederativa);
+            this.Controls.Add(this.labelUnidadeFederativa);
+            this.Controls.Add(this.Cancelar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.maskedTextBoxQuantidadeHabitantes);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBoxPib);
             this.Controls.Add(this.labelPib);
             this.Controls.Add(this.labelDataHoraFundacao);
             this.Controls.Add(this.dateTimePicker1);
@@ -131,7 +175,11 @@
         private DateTimePicker dateTimePicker1;
         private Label labelDataHoraFundacao;
         private Label labelPib;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox maskedTextBoxPib;
         private MaskedTextBox maskedTextBoxQuantidadeHabitantes;
+        private Button buttonSalvar;
+        private Button Cancelar;
+        private Label labelUnidadeFederativa;
+        private ComboBox comboBoxUnidadeFederativa;
     }
 }

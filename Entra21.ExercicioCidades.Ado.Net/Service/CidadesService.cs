@@ -10,7 +10,7 @@ using System.Data;
 
 namespace Entra21.ExercicioCidades.Ado.Net.Service
 {
-    internal class CidadesService
+    internal class CidadesService : ICidadeService
     {
         public void Apagar(int id)
         {
@@ -33,8 +33,8 @@ namespace Entra21.ExercicioCidades.Ado.Net.Service
 
             comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
-            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.Quantidade_Habitantes);
-            comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.Data_Hora_Fundacao);
+            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.QuantidadeHabitantes);
+            comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.DataHoraFundacao);
             comando.Parameters.AddWithValue("PIB", cidade.Pib);
 
             comando.ExecuteNonQuery();
@@ -51,8 +51,8 @@ namespace Entra21.ExercicioCidades.Ado.Net.Service
 
                 comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
-            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.Quantidade_Habitantes);
-            comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.Data_Hora_Fundacao);
+            comando.Parameters.AddWithValue("@QUANTIDADE_HABITANTES", cidade.QuantidadeHabitantes);
+            comando.Parameters.AddWithValue("@DATA_HORA_FUNDACAO", cidade.DataHoraFundacao);
             comando.Parameters.AddWithValue("@PIB", cidade.Pib);
 
             comando.ExecuteNonQuery();
@@ -84,6 +84,41 @@ namespace Entra21.ExercicioCidades.Ado.Net.Service
 
             return cidades;
             
+        }
+
+        public List<Cidades> ObterTodos(int id)
+        {
+            var conexao = new Conexao().Conectar();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = @"SELECT";
+
+            comando.CommandText = @"SELECT
+id, id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib
+FROM cidades WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@ID", id);
+            var dataTable = new DataTable();
+
+            dataTable.Load(comando.ExecuteReader());
+
+            if (dataTable.Rows.Count == 0)
+                return null;
+
+            var registro = dataTable.Rows[0];
+            var cidade = new Cidades();
+            cidade.Id = Convert.ToInt32(registro["id"]);
+
+            cidade.UnidadeFederativa = new UnidadesFederativas();
+            cidade.UnidadeFederativa.Id = Convert.ToInt32(registro["id_unidade_federativa"]);
+
+            cidade.Nome = registro["nome"].ToString();
+            cidade.QuantidadeHabitantes = Convert.ToInt32(registro["quantidade_habitantes"]);
+            cidade.DataHoraFundacao = Convert.ToDateTime(registro["data_hora_fundacao"]);
+            //Acho que eta faltando coisa
+
+            comando.Connection.Close();
+
+            return cidade;
         }
 
     }
