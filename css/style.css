@@ -1,0 +1,22 @@
+body{
+    background: #dcbdbd;
+    color: #f00
+}
+p{
+    font-size:10px;
+    color: blue;
+    font-weight: 900;
+}
+a{
+    text-decoration: none;
+    background: #080;
+    color: #fff;
+    border: 1px solid #000;
+    font-size: 12px;
+    padding:5px, 7px;
+    border-radius: 5px;
+}
+a:hover{
+    background: #016136;
+    color: #fff
+}
